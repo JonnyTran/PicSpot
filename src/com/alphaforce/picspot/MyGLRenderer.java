@@ -23,8 +23,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer, SensorEventListener
     private float[] mViewMatrix = new float[16];
     private float[] mRotationMatrix = new float[16];
     
-	private float mAngle;
-    
 	private Triangle mTriangle;
 	
 	/* 
@@ -119,22 +117,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer, SensorEventListener
         GLES30.glCompileShader(shader);
         
         return shader;
-    }
-	
-	/**
-     * Returns the rotation angle of the triangle shape (mTriangle).
-     *
-     * @return - A float representing the rotation angle.
-     */
-    public float getAngle() {
-        return mAngle;
-    }
-
-    /**
-     * Sets the rotation angle of the triangle shape (mTriangle).
-     */
-    public void setAngle(float angle) {
-        mAngle = angle;
     }
 
 	@Override
