@@ -157,15 +157,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer, SensorEventListener
 			SensorManager.getRotationMatrix(mRotationMatrix, null, gravity, geomag);
 			SensorManager.remapCoordinateSystem( 
 					mRotationMatrix, 
-					SensorManager.AXIS_Y, 
-					SensorManager.AXIS_MINUS_X, 
+					SensorManager.AXIS_MINUS_X,
+					SensorManager.AXIS_Y,
 					mRotationMatrix );
 		}
-		
-		for (int i = 0; i < mRotationMatrix.length; i++) {
-			System.out.print(mRotationMatrix[i] + ", ");
-		}
-		System.out.println();		
 	}
 
 	@Override
